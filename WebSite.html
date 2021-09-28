@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Garden Parkng</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+  <style>
+    p {
+      font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    .foto-perfil {
+      height: 100%;
+      max-width: available;
+      border-radius: 50%;
+    }
+
+    .icones {
+      padding-left: 5px;
+    }
+
+    .titulosBrancos {
+      text-decoration: underline;
+      text-underline-position: under;
+      padding-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+    }
+
+    .titulosVerdes {
+      text-decoration: underline;
+      text-underline-position: under;
+      padding-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #18bc9c
+    }
+
+    .paragrafoBrancos {
+      color: white !important;
+    }
+
+
+    .jumbotron {
+      margin-bottom: 0px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    p {
+      color: black !important;
+    }
+
+    .corPrimaria {
+      background-color: #18bc9c;
+    }
+
+    .itemMenu {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-light" style="background-color:#2c3e50">
+  <a class="navbar-brand" href="#" style=color:white>Garden Park</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+          aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+
+    </ul>
+    <ul class="navbar-nav">
+      <li>
+        <a href="#projetos" class="nav-link" style=color:white>Projetos</a>
+      </li>
+      <li>
+        <a href="#sobre_a_equipe" class="nav-link" style=color:white>Sobre a Equipe</a>
+      </li>
+      <li>
+        <a href="#depoimentos" class="nav-link" style=color:white>Depoimentos</a>
+      </li>
+      <li>
+        <a href="#contato" class="nav-link" style=color:white>Contato</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section class="jumbotron text-center corPrimaria">
+  <div class="container">
+    <img src="data:image/jpeg;base64,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" class="foto-perfil" alt="Responsive image">
+    <h1 class="jumbotron-heading" style="color:white;text-transform: uppercase;">Garden Park</h1>
+    <p class="lead" style="color:white !important;"> Sustentabilidade - Foco no Futuro - Inovação
+    </p>
+    <p>
+      <a href="#contato" class="btn btn-dark my-2">Contato</a>
+    </p>
+    <a href="https://github.com/ProjetoIntII" target="_blank"><i style="color:white" class="fab fa-github" aria-hidden="true"></i></a>
+  </div>
+</section>
+<!-- Projects -->
+<div class="album py-5 bg-light " id="projetos">
+  <div class="container">
+    <h2 class="text-center jumbotron-heading titulosVerdes">Projetos</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top"
+               data-src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/03/code-1076536_1920.jpg&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+               alt="Thumbnail [100%x225]" src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/03/code-1076536_1920.jpg" data-holder-rendered="true"
+               style="height: 225px; width: 100%;max-width: 100%; display: block;">
+          <div class="card-body">
+            <p class="card-text">Esse é um projeto desenvolvido por:
+            </p>
+            <ul>
+              <li>Artur Pagno</li>
+              <li>Carlos Fontes</li>
+              <li>Cesar Augusto</li>
+              <li>Felipe Tayar<li>
+              Patrick Leite
+            </ul>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+
+                <form target="_blank">
+                  <button class="btn btn-sm btn-outline-success" formaction="https://trello.com/b/iS1InQcZ/estacionamento">Ver Projeto</button>
+                </form>
+                <form target="_blank">
+                  <button class="btn btn-sm btn-outline-success" formaction="https://github.com/ProjetoIntII/MVP/blob/main/MVPProj.cpp">Ver Código</button>
+                </form>
+              </div>
+              <small class="text-muted">Projeto MVP</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="jumbotron text-center corPrimaria" id="sobre_a_equipe">
+  <div class="container">
+    <h2 class="jumbotron-heading titulosBrancos">Sobre a Equipe</h2>
+    <p class="lead paragrafoBrancos">Somos estudantes de Engenharia de Software na Pontifícia Universidade Católica de
+      Campinas, atualmente cursando o segundo semestre. A tarefa dada a nós foi sobre desenvolver um sistema de
+      gerenciamento de estacionamentos, e tivemos a idéia de combinar o gerenciamento de automóveis com sustentabilidade.
+      Assim, utilizando os métodos e o conhecimento adquirido em sala de aula, criamos o "Garden Park".
+    </p>
+  </div>
+</section>
+
+<section Id="depoimentos">
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center jumbotron-heading titulosVerdes">Depoimentos</h2>
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">É sem dúvidas o nosso trabalho mais ambicioso.</p>
+        <footer class="blockquote-footer">Líder do Time - <cite title="Source Title"> Patrick Pimentel </cite>
+        </footer>
+      </blockquote>
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">Nada disso seria possível sem essa magnífica equipe de professores.</p>
+        <footer class="blockquote-footer">Membro da Equipe <cite title="Source Title">Cesar Augusto</cite>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section Id="contato" class="corPrimaria">
+  <div class="corPrimaria">
+    <div class="container-fluid">
+      <h3 style="padding-top:90px;" class="text-center titulosBrancos">Disponível para Patrocinadores</h3>
+      <h4 style="padding-bottom:90px;margin-bottom: 0px;color:white;" class="text-center"><a
+        href="mailto:patrick.pcl@puccampinas.edu.br">patrick.pcl@puccampinas.edu.br👈</a></h4>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center" style="background-color:#2c3e50;padding:0px; margin:0px">
+  <p style="margin:0px;padding-top:15px;padding-bottom:15px;color:white !important">Copyright 2021 - 2023
+    GardenPark®
+  </p>
+</footer>
+
+</body>
+
+</html>
