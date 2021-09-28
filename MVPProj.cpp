@@ -20,7 +20,7 @@ void TelaLogin() {
     cout << "Digite a Senha: ";
     cin >> senhaentry;
 
-    if (loginentry == "teste" && senhaentry == "senha");
+    if ((loginentry == login) && (senhaentry == senha));
     {
         cout << "Bem vindo" << endl;
     }
@@ -32,27 +32,34 @@ void MostrarMenu() {
     cout << "\n\n--------------------------------" << endl;
     cout << "----Bem Vindo ao Garden Park----" << endl;
     cout << "--------------------------------" << endl;
-    cout << "1) - Cadastrar Cliente" << endl;
-    cout << "2) - Visualizar Vagas" << endl;
-    cout << "3) - Pagar Estacionamento" << endl;
-    cout << "4) - Gerenciamento de Reservas" << endl;
-    cout << "5) - Realizar Login" << endl;
+    cout << " 1) - Cadastrar Cliente" << endl;
+    cout << " 2) - Visualizar Vagas" << endl;
+    cout << " 3) - Pagar Estacionamento" << endl;
+    cout << " 4) - Gerenciamento de Reservas" << endl;
+    cout << " 5) - Realizar Login" << endl;
 
+    cout << "\n Opcao: ";
     cin >> opcao;
     cout << "\n\n\n";
 
 }
 
 void VisualizarVagas() {
-    cout << "Visualizando Vagas....";
+    cout << "\n\nVisualizando Vagas....\n\n\n";
+    cout << R"( |  |  |  |  |  |  |  |  |  |  |  |  | 
+                                                        
+ |  |  |  |  |  |  |  |  |  |  |  |  |
+
+ |  |  |  |  |  |  |  |  |  |  |  |  |)";
+    cout << "\n\n\n";
 }
 
 void PagarEstacionamento() {
-    cout << "Iniciando Gerenciamento de Pagamento....";
+    cout << "Iniciando Gerenciamento de Pagamento....\n\n\n";
 }
 
 void GerenciamentoReservas() {
-    cout << "Iniciando o Gerenciamento de Reservas....";
+    cout << "Iniciando o Gerenciamento de Reservas....\n\n\n";
 }
 
 void CadastroClientes() {
@@ -63,13 +70,13 @@ void CadastroClientes() {
     cout << "Digite o CPF: ";
     cin >> CPF;
 
-    cout << "\nDigite o Nome: " << endl;
+    cout << "\nDigite o Nome: ";
     cin >> Nome;
 
-    cout << "\nDigite a Placa:" << endl;
+    cout << "\nDigite a Placa: ";
     cin >> Placa;
 
-    cout << "\nDigite a Senha para Registro: " << endl;
+    cout << "\nDigite a Senha para Registro: ";
     cin >> Senha;
 
 
@@ -81,14 +88,15 @@ int main()
     setlocale(LC_ALL, "Portuguese");
 
 
-    /*cout << R"(     ____               _              ____            _    _
+    cout << R"(     ____               _              ____            _    _
   / ___| __ _ _ __ __| | ___ _ __   |  _ \ __ _ _ __| | _(_)_ __   __ _
  | |  _ / _` | '__/ _` |/ _ \ '_ \  | |_) / _` | '__| |/ / | '_ \ / _` |
  | |_| | (_| | | | (_| |  __/ | | | |  __/ (_| | |  |   <| | | | | (_| |
   \____|\__,_|_|  \__,_|\___|_| |_| |_|   \__,_|_|  |_|\_\_|_| |_|\__, |
-                                                                  |___/   )"; */
+                                                                  |___/   )";
 
     cout << "\n\n Ola bem vindo ao MVP do Projeto Garden Park! " << endl;
+
 
     MostrarMenu();
 
